@@ -4,7 +4,11 @@ import java.sql.SQLException;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 import br.sceweb.servico.FabricaDeConexoes;
-
+/**
+ * Manter a coneção
+ * @author Lab103
+ * @version 1
+ */
 public class EmpresaDAO {
 
 	public int adiciona(Empresa empresa){

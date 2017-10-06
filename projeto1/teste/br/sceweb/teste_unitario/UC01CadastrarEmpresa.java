@@ -23,6 +23,10 @@ public class UC01CadastrarEmpresa {
 		empresa.setEndereco("rua taquari");
 		empresa.setTelefone("2222");
 	}
+	/**
+	 * CT01UC01FBCadastrar_com_sucesso
+	 * Objetivo- verificar o comportamento para o cadasatro da empresa
+	 */
 	@ Ignore
 	@Test
 	public void CT01UC01FBCadastra_com_sucesso() {
