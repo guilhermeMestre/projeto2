@@ -23,14 +23,26 @@ public class UC01CadastrarEmpresa {
 		empresa.setEndereco("rua taquari");
 		empresa.setTelefone("2222");
 	}
+	@ Ignore
 	@Test
 	public void CT01UC01FBCadastra_com_sucesso() {
-		assertEquals(1,empresaDAO.adiciona(empresa));
+		assertEquals(1,empresaDAO.adiciona(empresa));	
+	}
+	@Ignore
+	@Test
+	public void CT02UC01FBCadastra_cnpj_invalido() {
+		assertEquals("cnpj invalido",empresa.setCnpj("9895"));
+	}
+	
+	@Test
+	public void CT03UC01FBCadastra_cnpj_jacadastrado() {
+		empresaDAO.adiciona(empresa);
+		assertEquals(0,empresaDAO.adiciona(empresa));
 	}
 	
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
-		empresaDAO.exclui("89424232000180");
+		//empresaDAO.exclui("89424232000180");
 	}
 }
 
